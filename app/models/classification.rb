@@ -7,7 +7,6 @@ class Classification < ActiveRecord::Base
   end
 
   def self.longest
-   #binding.pry
-    self.joins(:boats).limit(1).group("boats.length")
+  Boat.longest.classifications
   end
 end
